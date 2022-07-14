@@ -1,38 +1,325 @@
-.App {
-  text-align: center;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+    --yellow: hsl(47, 100%, 50%);
+    --grey: hsl(0, 0%, 96%);
+    --dark-grey: #6a6a6a;
+    --blue-grey: #3D464D;
+    --white: #ffff;
+    --black: rgba(0, 0, 0, 0.5);
+    --very-light-black: rgba(0, 0, 0, 0.2);
+
+    --multi-shop-height: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+    list-style-type: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+    text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ---------------- top navigation ------------------ */
+.top-nav {
+    background-color: var(--grey);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 50px;
 }
+
+.about {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about>a,
+.auth>a {
+    color: var(--black);
+    font-weight: 600;
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.push-left {
+    margin-left: 50px;
+}
+
+.push-right {
+    margin-right: 50px;
+}
+
+/* ---------------- end navigation ------------------ */
+
+
+/* ---------------- search bar ------------------ */
+
+.middle-nav {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: space-between;
+    background-color: var(--white);
+}
+
+.middle-nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.multi,
+.shop {
+    width: 130px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.shop {
+    background-color: var(--yellow);
+    color: var(--blue-grey);
+}
+
+.multi {
+    background-color: var(--blue-grey);
+    color: var(--yellow);
+}
+
+.search-bar {
+    width: 400px;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid var(--very-light-black);
+}
+
+.search-bar:focus {
+    border: 1px solid var(--yellow);
+    outline: none;
+}
+
+.search-bar::placeholder {
+    font-size: 16px;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.middle-nav button {
+    height: 40px;
+    width: 40px;
+    background-color: var(--white);
+    border: 1px solid var(--very-light-black);
+    color: var(--yellow);
+    font-size: 16px;
+}
+
+.customer-service {
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-service>li:nth-child(1) {
+    color: var(--black);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.customer-service>li:nth-child(2) {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--blue-grey);
+}
+
+/* ---------------- end search bar ------------------ */
+
+/* --------------------------- navigation bar ---------------------- */
+.main-nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.main-nav a {
+    color: var(--white);
+}
+
+.main-nav>li:nth-child(1) {
+    color: var(--blue-grey);
+    background-color: var(--yellow);
+    height: 60px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.categories {
+    z-index: 2;
+    position: absolute;
+    /* display: none; */
+    top: 80px;
+    width: 100%;
+}
+
+.categories>li {
+    border-bottom: 1px solid var(--black);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    visibility: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    background-color: var(--blue-grey);
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.cart>li>i {
+    color: var(--yellow);
+    font-size: 20px;
+}
+
+/* --------------------------- end navigation bar ---------------------- */
+
+
+
+/* ------------------------------- footer ---------------------------------- */
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--blue-grey);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: var(--white);
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-bottom: 1px solid var(--dark-grey);
+    height: 350px;
+    align-items: center;
+}
+
+.email-signup>input {
+    width: 200px;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid var(--very-light-black);
+    outline: none;
+}
+
+.email-signup>input::placeholder {
+    font-size: 16px;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.email-signup {
+    display: flex;
+}
+
+.email-signup>button {
+    height: 40px;
+    width: 80px;
+    background-color: var(--yellow);
+    border: 1px solid var(--very-light-black);
+    color: var(--blue-grey);
+    font-size: 16px;
+}
+
+/* footer h3 {
+    margin-bottom: 25px;
+} */
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media>li {
+    width: 40px;
+    height: 40px;
+    background-color: var(--yellow);
+    color: var(--blue-grey);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-bottom {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+footer span {
+    color: var(--yellow);
+}
+
+address,
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.quick-shop,
+.my-account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 20px;
+}
+
+.quick-shop>ul,
+.my-account>ul,
+.addy {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* ------------------------------- end footer ---------------------------------- */
