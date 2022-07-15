@@ -19,7 +19,7 @@ A website that allows people to buy and sell physical goods, services, and digit
 
 Users should be able to:
 
-- Users should be able to view all the available profucts
+- Users should be able to view all the available products
 - Users should be able to view all the products available based on their category
 - Users should be able to contact the owners of the products through an input form
 
@@ -29,7 +29,7 @@ This section contains link to all the API endpoint used in the app.
 
 - API: [Products API](https://your-solution-url.com)
 - API: [Products ID API](https://your-live-site-url.com)
-- Live Site URL: [visit our website](https://your-live-site-url.com)
+- Live Site URL: [visit our website](https://e-commmerce-store.vercel.app/)
 
 ### Built with
 
