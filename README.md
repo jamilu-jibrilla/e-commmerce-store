@@ -19,7 +19,7 @@ A website that allows people to buy and sell physical goods, services, and digit
 
 Users should be able to:
 
-- Users should be able to view all the products available
+- Users should be able to view all the available profucts
 - Users should be able to view all the products available based on their category
 - Users should be able to contact the owners of the products through an input form
 
