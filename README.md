@@ -13,8 +13,6 @@ A website that allows people to buy and sell physical goods, services, and digit
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -26,6 +24,8 @@ Users should be able to:
 - Users should be able to contact the owners of the products through an input form
 
 ### Links
+
+This section contains link to all the API endpoint used in the app.
 
 - API: [Products API](https://your-solution-url.com)
 - API: [Products ID API](https://your-live-site-url.com)
