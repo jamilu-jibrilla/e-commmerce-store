@@ -1,7 +1,11 @@
+import Footer from "../components/footer";
+import Header from "../components/header";
 const Home = () => {
   return (
     <>
-      <h1 className="text-3xl font-bold">hello world</h1>
+      <Header />
+      <h1 className="text-3xl h-12 font-bold">hello world</h1>
+      <Footer />
     </>
   );
 };
