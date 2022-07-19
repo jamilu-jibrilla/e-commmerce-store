@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import Dropdown from "./Dropdown";
 
 const Navbar = () => {
+  let [showNav, setShowNav] = useState(false);
+  const handeleDisplay = () => {
+    setShowNav((prev) => !prev);
+  };
   return (
     <nav>
       <ul className="main-nav">
-        <li className="push-left">
-          {" "}
+        <li onClick={handeleDisplay} className="first-child push-left">
           <i className="fa fa-bars push-left"></i> Categotries
-          <ul className="categories">
+          <ul className={` ${showNav ? "" : "none"} categories`}>
             <li>Dresses</li>
             <li>Shirts</li>
             <li>Jeans</li>
@@ -26,6 +31,9 @@ const Navbar = () => {
         <Link to="/contact">
           <li>shop Detail</li>
         </Link>
+        <li>
+          <Dropdown />
+        </li>
         <Link to="/">
           <li>Contact</li>
         </Link>
@@ -34,9 +42,11 @@ const Navbar = () => {
       <ul className="cart">
         <li>
           <i className="fa fa-heart"></i>
+          <span>0</span>
         </li>
         <li className="push-right">
           <i className="fa fa-shopping-cart"></i>
+          <span>0</span>
         </li>
       </ul>
     </nav>
