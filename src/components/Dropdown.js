@@ -44,7 +44,7 @@ const Dropdown = () => {
       >
         <div class="p-1" role="none">
           <a
-            href="#"
+            href="/"
             class="text-black hover:bg-white block px-4 py-2 text-sm"
             role="menuitem"
             tabindex="-1"
@@ -54,7 +54,7 @@ const Dropdown = () => {
             Shopping Cart
           </a>
           <a
-            href="#"
+            href="/"
             class="text-black hover:bg-white bg block px-4 py-2 text-sm"
             role="menuitem"
             tabindex="-1"
