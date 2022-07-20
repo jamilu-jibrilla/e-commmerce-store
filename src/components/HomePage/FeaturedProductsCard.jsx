@@ -1,11 +1,11 @@
-import sneaker from "./sneaker.png"
+// import sneaker from "./sneaker.png"
 import { FaShoppingCart, FaSearch } from "react-icons/fa"
 import { MdOutlineFavoriteBorder } from "react-icons/md"
 import { GoSync } from "react-icons/go"
 import React, { useState } from 'react';
 
 
-const FeaturedProductsCard = () => {
+const FeaturedProductsCard = (props) => {
     const [isShown, setIsShown] = useState(false);
 
     return (
@@ -24,13 +24,13 @@ const FeaturedProductsCard = () => {
             </div>
             {/* shopping card icons end*/}
             <div className="flex justify-center items-center w-[22rem] aspect-square">
-                <img src={sneaker} alt="item" className={`w-[95%] aspect-square object-cover duration-200 ease-in ${isShown ? "scale-110 opacity-50" : ""}`}/>
+                <img src={props.image} alt="item" className={`w-[75%] aspect-square object-cover duration-200 ease-in ${isShown ? "scale-110 opacity-50" : ""}`}/>
             </div>
             <div className="py-[1.31rem]">
-                <h2 className="text-[#3d464d] text-[1rem] font-Roboto font-[700] duration-200 ease-in hover:text-proj-yel">Product Name</h2>
+                <h2 className={`text-[#3d464d] text-[1rem] font-Roboto font-[700] duration-200 ease-in ${isShown ? "text-proj-yel" : ""}`}>{props.productName}</h2>
                 <div className="flex justify-center items-center gap-x-4">
-                    <h2 className="text-[#3d464d] text-[1.2rem] font-Roboto font-[700]">$123.00</h2>
-                    <h2 className="text-[#3d464d] text-[0.9rem] font-Roboto line-through">$123.00</h2>
+                    <h2 className="text-[#3d464d] text-[1.2rem] font-Roboto font-[700]">{props.price}</h2>
+                    <h2 className="text-[#3d464d] text-[0.9rem] font-Roboto line-through">{props.oldPrice}</h2>
                 </div>
             </div>
         </div>
