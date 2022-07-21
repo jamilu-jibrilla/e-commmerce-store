@@ -24,7 +24,7 @@ const FeaturedProductsCard = (props) => {
             </div>
             {/* shopping card icons end*/}
             <div className="flex justify-center items-center w-[22rem] aspect-square">
-                <img src={props.image} alt="item" className={`w-[75%] aspect-square object-cover duration-200 ease-in ${isShown ? "scale-110 opacity-50" : ""}`}/>
+                <img src={props.image} alt="item" className={`w-[75%] aspect-square object-contain duration-200 ease-in ${isShown ? "scale-110 opacity-50" : ""}`}/>
             </div>
             <div className="py-[1.31rem]">
                 <h2 className={`text-[#3d464d] text-[1rem] font-Roboto font-[700] duration-200 ease-in ${isShown ? "text-proj-yel" : ""}`}>{props.productName}</h2>
