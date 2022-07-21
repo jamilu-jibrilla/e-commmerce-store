@@ -33,7 +33,7 @@ const FeaturedProducts = () => {
           <div className="h-[0.05rem] bg-gray-400 grow"></div>
       </div>
       <div className="w-screen flex md:flex-row sm:flex-col md:justify-center sm:items-center flex-wrap md:gap-x-10 md:gap-y-8 sm:gap-y-6">
-        {products ? products.map((product, index) => {
+        {products.length > 1 ? products.map((product, index) => {
           return(
             <FeaturedProductsCard
               key={index}
