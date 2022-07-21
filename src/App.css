@@ -202,6 +202,7 @@ header {
   position: absolute;
   top: 60px;
   width: inherit;
+  height: inherit;
   transition: all 2sec;
 }
 
@@ -214,6 +215,7 @@ header {
   background: white;
   color: rgba(0, 0, 0, 0.5);
   font-weight: normal;
+  
 }
 
 nav {
@@ -397,6 +399,12 @@ address,
   }
   /* ---------------- end navigation ------------------ */
 
+  .header {
+    position: fixed;
+    top:0;
+    z-index: 20;
+    width: 100%
+  }
   /* ---------------- search bar ------------------ */
 
   .middle-nav {

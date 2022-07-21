@@ -6,7 +6,7 @@ import { useState } from "react";
 const Header = () => {
   const [mobileNav, setMobileNav] = useState(true)
   return (
-    <header>
+    <header className="header">
       <TopNav />
       <MiddleNav setMobileNav={setMobileNav} />
       <Navbar mobileNav={mobileNav} />

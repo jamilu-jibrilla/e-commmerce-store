@@ -25,7 +25,7 @@ const Categories = () => {
   }
 
   return (
-    <section className="bg-[#f1f2f3] py-11 ">
+    <section className="bg-[#f1f2f3] py-11 sm:mt-24 md:mt-0">
       <div className="flex items-center mb-6 sm:px-6">
         <h1 className="text-3xl h-12 uppercase font-Roboto font-[700] text-[#3d464d] pr-4 ">
           Categories
@@ -33,7 +33,7 @@ const Categories = () => {
         <div className="h-[0.05rem] bg-gray-400 grow"></div>
       </div>
       <div className="w-screen overflow-hidden flex md:flex-row sm:flex-col md:justify-center sm:items-center flex-wrap md:gap-x-10 md:gap-y-6 sm:gap-y-6">
-        {categories ? categories.map((category, index) => {
+        {categories.length > 1 ? categories.map((category, index) => {
           return (
             <CategoriesCard
               key={index}
