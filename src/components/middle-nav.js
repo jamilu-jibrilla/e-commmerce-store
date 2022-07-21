@@ -1,11 +1,15 @@
-const MiddleNav = () => {
+const MiddleNav = ({setMobileNav}) => {
+
+  const showMenu = () => {
+    setMobileNav((prev)=> !prev )
+  }
   return (
     <div className="middle-nav">
       <ul className="push-left">
         <span className="multi">MULTI</span>
         <span className="shop">SHOP</span>
       </ul>
-      <i className="fa fa-bars hamburger"></i>
+      <i onClick={showMenu} className="fa fa-bars hamburger"></i>
       <ul>
         <input
           type="email"

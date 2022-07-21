@@ -10,7 +10,7 @@ const Dropdown = () => {
       <div>
         <button
           type="button"
-          class="inline-flex w-full text-white  text-sm font-medium     "
+          class="inline-flex  text-white hover:text-[#ffc800]  text-sm font-medium     "
           id="menu-button"
           aria-expanded="true"
           aria-haspopup="true"
@@ -42,10 +42,10 @@ const Dropdown = () => {
         aria-labelledby="menu-button"
         tabindex="-1"
       >
-        <div class="p-1" role="none">
+        <div role="none">
           <a
             href="/"
-            class="text-black hover:bg-white block px-4 py-2 text-sm"
+            className="text-black hover:bg-white  block px-4 py-2 text-sm"
             role="menuitem"
             tabindex="-1"
             id="menu-item-0"
@@ -55,7 +55,7 @@ const Dropdown = () => {
           </a>
           <a
             href="/"
-            class="text-black hover:bg-white bg block px-4 py-2 text-sm"
+            className="text-black hover:bg-white bg block px-4 py-2 text-sm"
             role="menuitem"
             tabindex="-1"
             id="menu-item-1"
