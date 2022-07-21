@@ -2,7 +2,7 @@ import sneaker from "./sneaker.png"
 import React, { useState } from 'react';
 
 
-const CategoriesCard = () => {
+const CategoriesCard = (props) => {
     const [isShown, setIsShown] = useState(false);
 
     return (
@@ -14,8 +14,8 @@ const CategoriesCard = () => {
                 <img src={sneaker} alt="" className={`w-[90%] aspect-square object-cover duration-300 ease-in ${isShown ? "scale-125 rotate-[6deg]" : ""}`}/>
             </div>
             <div className={`px-[2rem] flex flex-col justify-center gap-y-[0.6rem] grow duration-200 ease-in ${isShown ? "bg-proj-yel" : ""}`}>
-                <h2 className="text-[#3d464d] text-[1rem] font-Roboto font-[700]">Category Name</h2>
-                <p className="text-[#3d464d] text-[0.9rem] font-Roboto">100 products</p>
+                <h2 className="text-[#3d464d] text-[1rem] font-Roboto font-[700]">{props.categoryName}</h2>
+                <p className="text-[#3d464d] text-[0.9rem] font-Roboto">{props.categoryNumber}</p>
             </div>
         </div>
     );
