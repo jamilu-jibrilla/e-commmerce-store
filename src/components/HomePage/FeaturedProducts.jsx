@@ -1,9 +1,6 @@
 import FeaturedProductsCard from "./FeaturedProductsCard"
 import { useState, useEffect } from "react";
-<<<<<<< HEAD
-=======
 import Loader from "../Loader";
->>>>>>> 728416cc49a89f7bbdfb856f425400b1e0545578
 
 const FeaturedProducts = () => {
   const [products, setProducts] = useState([])
@@ -12,10 +9,6 @@ const FeaturedProducts = () => {
     fetch('https://fakestoreapi.com/products', {method : "get"})
       .then(response => response.json())
       .then(json => {
-<<<<<<< HEAD
-        console.log(json)
-=======
->>>>>>> 728416cc49a89f7bbdfb856f425400b1e0545578
         setProducts(json)
       })
       .catch(err => console.log(err.message))
@@ -51,9 +44,6 @@ const FeaturedProducts = () => {
               oldPrice={product.price - (getRandomInt(3, 7))}
             />
           )
-<<<<<<< HEAD
-        })}  
-=======
         })
       :
         <div className="flex flex-wrap items-center mb-6 ">
@@ -63,7 +53,6 @@ const FeaturedProducts = () => {
         </div>
       
       }  
->>>>>>> 728416cc49a89f7bbdfb856f425400b1e0545578
           
       </div>
     </section>
