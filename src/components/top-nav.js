@@ -6,24 +6,24 @@ const TopNav = () => {
     <div className="top-nav">
       <ul className="about">
         <Link to="/about" className="push-left">
-          <li>About</li>
+          About
         </Link>
         <Link to="/contact">
-          <li>Contact</li>
+          Contact
         </Link>
         <Link to="/contact">
-          <li>Help</li>
+          Help
         </Link>
         <Link to="/">
-          <li>FAQs</li>
+          FAQs
         </Link>
       </ul>
       <ul className="auth">
         <Link to="/about">
-          <li>Sign in</li>
+          Sign in
         </Link>
         <Link to="/about" className="push-right">
-          <li>Sign up</li>
+          Sign up
         </Link>
       </ul>
     </div>

@@ -25,7 +25,7 @@
 .pages {
   background: var(--yellow);
 }
-
+/* mobile hamburger icon*/
 .hamburger {
   display: none;
 }
@@ -42,6 +42,10 @@ header {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
+}
+
+.home {
+  overflow-x: hidden; 
 }
 
 /* ---------------- top navigation ------------------ */
@@ -63,6 +67,11 @@ header {
   color: var(--black);
 }
 
+.about > a:hover,
+.auth > a:hover {
+  text-decoration: underline;
+
+}
 .auth {
   display: flex;
   align-items: center;
@@ -172,6 +181,9 @@ header {
   color: var(--white);
 }
 
+.main-nav a:hover {
+  color: #ffc800;
+}
 .main-nav > li:nth-child(1) {
   color: var(--blue-grey);
   background-color: var(--yellow);
@@ -190,6 +202,7 @@ header {
   position: absolute;
   top: 60px;
   width: inherit;
+  height: inherit;
   transition: all 2sec;
 }
 
@@ -202,6 +215,7 @@ header {
   background: white;
   color: rgba(0, 0, 0, 0.5);
   font-weight: normal;
+  
 }
 
 nav {
@@ -235,8 +249,7 @@ nav {
 /* ------------------------------- footer ---------------------------------- */
 
 footer {
-  position: absolute;
-  bottom: 0;
+  position: relative;
   background-color: var(--blue-grey);
   width: 100%;
   display: flex;
@@ -344,7 +357,7 @@ address,
 /* ------------------------------- end footer ---------------------------------- */
 
 /* ------------------------------- mobile responsiveness ---------------------------------- */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .hamburger {
     display: block;
     font-size: 30px;
@@ -355,6 +368,7 @@ address,
     margin-left: auto;
     margin-top: 10px;
   }
+
 
   footer {
     position: relative;
@@ -385,6 +399,12 @@ address,
   }
   /* ---------------- end navigation ------------------ */
 
+  .header {
+    position: fixed;
+    top:0;
+    z-index: 20;
+    width: 100%
+  }
   /* ---------------- search bar ------------------ */
 
   .middle-nav {
@@ -395,7 +415,7 @@ address,
     padding: 15px;
     background-color: var(--blue-grey);
     margin: 0px;
-    margin-top: 15px;
+    margin-top: 20px;
   }
 
   .middle-nav ul {
@@ -442,6 +462,7 @@ address,
   /* --------------------------- navigation bar ---------------------- */
   nav {
     background: (var(--white));
+    height: 0px;
   }
   .main-nav {
     display: flex;
@@ -453,9 +474,13 @@ address,
     width: 100%;
     height: 300px;
     background-color: var(--blue-grey);
-    display: none;
+    transition: all .5s;
+    overflow-y: hidden;
   }
-
+  
+  .main-nav a {
+    width: 100%;
+  }
   .push-left,
   .push-right {
     margin: 0px 0px;
@@ -470,7 +495,7 @@ address,
     align-items: center;
     justify-content: flex-end;
     gap: 5px;
-    padding: 4px 0px;
+    padding: 4px;
 
     position: absolute;
     background: white;
@@ -488,6 +513,11 @@ address,
   .cart > li > i {
     color: var(--blue-grey);
     font-size: 17px;
+  }
+
+
+  .no-hamburger {
+    height: 0px;
   }
 
   /* --------------------------- end navigation bar ---------------------- */

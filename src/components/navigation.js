@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Dropdown from "./Dropdown";
 
-const Navbar = () => {
+const Navbar = ({mobileNav}) => {
   let [showNav, setShowNav] = useState(false);
   const handeleDisplay = () => {
     setShowNav((prev) => !prev);
   };
   return (
     <nav>
-      <ul className="main-nav">
+      <ul className={` ${ mobileNav ? "no-hamburger" : ""}  main-nav`}>
         <li onClick={handeleDisplay} className="first-child push-left">
           <i className="fa fa-bars push-left"></i> Categotries
           <ul className={` ${showNav ? "" : "none"} categories`}>
