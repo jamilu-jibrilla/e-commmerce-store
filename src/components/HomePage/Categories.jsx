@@ -25,26 +25,6 @@ const Categories = () => {
   }
 
   return (
-<<<<<<< HEAD
-    <section className="bg-[#f1f2f3] py-11">
-      <div className="flex items-center mb-6 sm:px-6">
-          <h1 className="text-3xl h-12 uppercase font-Roboto font-[700] text-[#3d464d] pr-4 ">
-            Categories
-          </h1>
-          <div className="h-[0.05rem] bg-gray-400 grow"></div>
-      </div>
-      <div className="w-screen flex md:flex-row sm:flex-col md:justify-center sm:items-center flex-wrap md:gap-x-10 md:gap-y-6 sm:gap-y-6">
-        {categories.map((category, index) => {
-          return(
-            <CategoriesCard
-              key={index}
-              categoryName={category.charAt(0).toUpperCase() + category.slice(1)}
-              categoryNumber={`${index*(getRandomInt(2,6))} products`}
-            />
-          )
-        })}
-        
-=======
     <section className="bg-[#f1f2f3] py-11 sm:mt-24 md:mt-0">
       <div className="flex items-center mb-6 sm:px-6">
         <h1 className="text-3xl h-12 uppercase font-Roboto font-[700] text-[#3d464d] pr-4 ">
@@ -72,7 +52,6 @@ const Categories = () => {
         </div>
       
       }
->>>>>>> 728416cc49a89f7bbdfb856f425400b1e0545578
       </div>
     </section>
   );
