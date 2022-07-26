@@ -1,14 +1,25 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Dropdown from "./Dropdown";
+import Cart from "./utils/Cart"
 
 const Navbar = ({mobileNav}) => {
   let [showNav, setShowNav] = useState(false);
   const handeleDisplay = () => {
     setShowNav((prev) => !prev);
   };
+
+  //logic to control showing cart
+  const [showCart, setShowCart] = useState(false);
+  const handleCartDisplay = () => {
+    setShowCart(!showCart)
+  };
+
   return (
-    <nav>
+    <nav className="relative">
+      <section className={`${showCart ? "" : "hidden"} absolute right-0 top-16 z-10`}>
+        <Cart />
+      </section>
       <ul className={` ${ mobileNav ? "no-hamburger" : ""}  main-nav`}>
         <li onClick={handeleDisplay} className="first-child push-left">
           <i className="fa fa-bars push-left"></i> Categotries
@@ -46,7 +57,7 @@ const Navbar = ({mobileNav}) => {
         </li>
         <li className="push-right">
           <i className="fa fa-shopping-cart"></i>
-          <span>0</span>
+          <button onClick={handleCartDisplay}>View Cart</button>
         </li>
       </ul>
     </nav>
