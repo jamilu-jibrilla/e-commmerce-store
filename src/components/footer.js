@@ -48,10 +48,10 @@ const Footer = () => {
                     </ul>
                     <h4>FOLLOW US</h4>
                     <ul className='social-media'>
-                        <li><i class="fa fa-facebook"></i></li>
-                        <li><i class="fa">&#xf099;</i></li>
-                        <li><i class="fa">&#xf0d2;</i></li>
-                        <li><i class="fa">&#xf16d;</i></li>
+                        <li><i className="fa fa-facebook"></i></li>
+                        <li><i className="fa">&#xf099;</i></li>
+                        <li><i className="fa">&#xf0d2;</i></li>
+                        <li><i className="fa">&#xf16d;</i></li>
                     </ul>
                 </div >
 
