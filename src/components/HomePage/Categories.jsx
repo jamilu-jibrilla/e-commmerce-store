@@ -27,7 +27,7 @@ const Categories = () => {
   return (
     <section className="bg-[#f1f2f3] py-11 sm:mt-24 md:mt-0">
       <div className="flex items-center mb-6 sm:px-6">
-        <h1 className="text-3xl h-12 uppercase font-Roboto font-[700] text-[#3d464d] pr-4 ">
+        <h1 className="text-3xl h-12 uppercase font-Roboto font-[700] text-[#3d464d] pr-4">
           Categories
         </h1>
         <div className="h-[0.05rem] bg-gray-400 grow"></div>
