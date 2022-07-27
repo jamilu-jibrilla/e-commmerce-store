@@ -3,22 +3,23 @@ import { useState } from "react";
 import Dropdown from "./Dropdown";
 import Cart from "./utils/Cart"
 
-const Navbar = ({mobileNav}) => {
+const Navbar = ({mobileNav, cartItems, setCartItems}) => {
   let [showNav, setShowNav] = useState(false);
   const handeleDisplay = () => {
     setShowNav((prev) => !prev);
   };
 
-  //logic to control showing cart
+  //logic to control displaying the cart on the home Page
   const [showCart, setShowCart] = useState(false);
   const handleCartDisplay = () => {
     setShowCart(!showCart)
   };
 
+
   return (
     <nav className="relative">
       <section className={`${showCart ? "" : "hidden"} absolute right-0 top-16 z-10`}>
-        <Cart />
+        <Cart cartItems={cartItems} setCartItems={setCartItems}/>
       </section>
       <ul className={` ${ mobileNav ? "no-hamburger" : ""}  main-nav`}>
         <li onClick={handeleDisplay} className="first-child push-left">

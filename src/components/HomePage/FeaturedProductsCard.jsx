@@ -8,6 +8,12 @@ import React, { useState } from 'react';
 const FeaturedProductsCard = (props) => {
     const [isShown, setIsShown] = useState(false);
 
+    const handleCartList = ()=>{
+        const item = {image:props.image, name:props.productName, price:props.price, id:props.id}
+        console.log(item)
+        props.setCartItems([...props.cartItems, item])  
+    }
+
     return (
         <div className="relative flex flex-col items-center text-center w-[22rem] h-[30rem] bg-white cursor-pointer overflow-hidden"
             onMouseEnter={() => setIsShown(true)}
@@ -16,7 +22,7 @@ const FeaturedProductsCard = (props) => {
             {/* shopping card icons start*/}
             <div className={`absolute items-center justify-center left-0 top-0 w-[22rem] h-[22rem] bg-none duration-500 ease-in ${isShown ? "flex overflow-hidden" : "hidden"}`}>
                 <div className="flex gap-x-[0.375rem] z-10 duration-200 ease-in">
-                    <FaShoppingCart className={iconStyle}/>
+                    <FaShoppingCart className={iconStyle} onClick={handleCartList}/>
                     <MdOutlineFavoriteBorder className= {iconStyle}/>
                     <GoSync className= {iconStyle}/>
                     <FaSearch className= {iconStyle}/>

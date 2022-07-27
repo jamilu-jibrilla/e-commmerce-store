@@ -6,11 +6,11 @@ const Dropdown = () => {
     setShowNav((prev) => !prev);
   };
   return (
-    <div class="dropdown relative inline-block text-left">
+    <div className="dropdown relative inline-block text-left">
       <div>
         <button
           type="button"
-          class="inline-flex  text-white hover:text-[#ffc800]  text-sm font-medium     "
+          className="inline-flex  text-white hover:text-[#ffc800]  text-sm font-medium     "
           id="menu-button"
           aria-expanded="true"
           aria-haspopup="true"
@@ -34,7 +34,7 @@ const Dropdown = () => {
       </div>
 
       <div
-        class={` ${
+        className={` ${
           showNav ? "" : "none"
         } origin-top-right absolute left-0 mt-5 w-40 pages  shadow-lg  ring-1 ring-black ring-opacity-5 focus:outline-none`}
       >

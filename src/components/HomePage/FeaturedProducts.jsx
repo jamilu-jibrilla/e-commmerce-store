@@ -2,7 +2,7 @@ import FeaturedProductsCard from "./FeaturedProductsCard"
 import { useState, useEffect } from "react";
 import Loader from "../Loader";
 
-const FeaturedProducts = () => {
+const FeaturedProducts = ({setCartItems, cartItems}) => {
   const [products, setProducts] = useState([])
 
   const fetchProducts = async () => {
@@ -34,10 +34,13 @@ const FeaturedProducts = () => {
       </div>
       <div className="w-screen flex md:flex-row sm:flex-col md:justify-center sm:items-center flex-wrap md:gap-x-10 md:gap-y-8 sm:gap-y-6">
 
-        {products.length > 1 ? products.map((product, index) => {
+        {products.length > 1 ? products.map((product) => {
           return(
             <FeaturedProductsCard
-              key={index}
+              setCartItems={setCartItems}
+              cartItems={cartItems}
+              key={product.id}
+              id={product.id}
               image={product.image}
               productName={product.title}
               price={product.price}
