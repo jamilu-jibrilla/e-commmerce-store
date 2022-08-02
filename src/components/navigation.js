@@ -57,8 +57,8 @@ const Navbar = ({mobileNav, cartItems, setCartItems}) => {
           <span>0</span>
         </li>
         <li className="push-right">
-          <i className="fa fa-shopping-cart"></i>
-          <button onClick={handleCartDisplay}>View Cart</button>
+          <i className="fa fa-shopping-cart mr-3"></i>
+          <button className="text-white" onClick={handleCartDisplay}>View Cart</button>
         </li>
       </ul>
     </nav>

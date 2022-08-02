@@ -7,11 +7,11 @@ const Footer = () => {
                 <address>
                     <h3>GET IN TOUCH</h3>
                     <p>
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                        Multi shop has all the products you need, ranging from clothing to electronic gadgets and even household equipments. Visit our office address below to learn more.
                     </p>
                     <ul className='addy'>
-                        <li>123 Street, New York, USA</li>
-                        <li>info@example.com</li>
+                        <li>Shopping complex, Jimeta, Adamawa</li>
+                        <li>Jamil@getrich.com</li>
                         <li>+012 345 67890</li>
                     </ul>
                 </address>
@@ -30,18 +30,18 @@ const Footer = () => {
                 <div className='my-account'>
                     <h3>MY ACCOUNT</h3>
                     <ul>
-                        <li>Home</li>
-                        <li>Our Shop</li>
-                        <li>Shop Detail</li>
+                        <li>Favorites</li>
+                        <li>Register</li>
+                        <li>Login</li>
+                        <li>Contact</li>
+                        <li>Recommendations</li>
                         <li>Shopping Cart</li>
-                        <li>Checkout</li>
-                        <li>Contact Us</li>
                     </ul>
                 </div>
 
                 <div className='newsletter'>
                     <h3>NEWSLETTER</h3>
-                    <p>Duo stet tempor ipsum sit amet magna ipsum tempor est</p>
+                    <p>Enter your email to get latest information regarding new products</p>
                     <ul className='email-signup'>
                         <input type="email" placeholder='Your Email Address' />
                         <button type="submit">Sign Up</button>

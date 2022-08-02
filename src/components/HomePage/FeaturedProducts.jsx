@@ -1,22 +1,16 @@
 import FeaturedProductsCard from "./FeaturedProductsCard"
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Loader from "../Loader";
+import { useDispatch, useSelector } from "react-redux";
+import { setFeaturedProducts } from "../../redux/actions/productActions";
 
 const FeaturedProducts = ({setCartItems, cartItems}) => {
-  const [products, setProducts] = useState([])
-
-  const fetchProducts = async () => {
-    fetch('https://fakestoreapi.com/products', {method : "get"})
-      .then(response => response.json())
-      .then(json => {
-        setProducts(json)
-      })
-      .catch(err => console.log(err.message))
-  }
+  const dispatch = useDispatch()
+  const products = useSelector(state => state.allProducts.products)
 
   useEffect( () => {
-    fetchProducts()
-  }, [])
+    dispatch(setFeaturedProducts())
+  }, [dispatch])
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
