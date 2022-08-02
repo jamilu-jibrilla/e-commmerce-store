@@ -1,23 +1,17 @@
 import CategoriesCard from "./CategoriesCard";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Loader from "../Loader";
+import { useDispatch, useSelector } from "react-redux";
+import { setCategories } from "../../redux/actions/productActions";
+
 
 const Categories = () => {
-  const [categories, setCategories] = useState([]);
-
-  const fetchCategories = async () => {
-    fetch("https://fakestoreapi.com/products/categories", { method: "get" })
-      .then((response) => response.json())
-      .then((json) => {
-        setCategories(json);
-      })
-      .catch((err) => console.log(err.message));
-  };
-
-  useEffect(() => {
-    fetchCategories();
-  }, []);
-
+  const categories = useSelector(state => state.allCategories.categories)
+  const dispatch = useDispatch()
+  useEffect(()=> {
+    dispatch(setCategories())
+  }, [dispatch])  
+  
   function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -25,7 +19,7 @@ const Categories = () => {
   }
 
   return (
-    <section className="bg-[#f1f2f3] py-11 sm:mt-24 md:mt-0">
+    <section className="bg-[#f1f2f3] py-11 sm:mt-24">
       <div className="flex items-center mb-6 sm:px-6">
         <h1 className="text-3xl h-12 uppercase font-Roboto font-[700] text-[#3d464d] pr-4">
           Categories
